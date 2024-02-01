@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(135, 202, 231);
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.home {
+    color: blue;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
