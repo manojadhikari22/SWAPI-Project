@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+
+nav a {
+    margin-left: 3rem;
+    font-size: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+.createdList {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+.vehicleName {
+    font-size: 1.5em;
+    color: #007BFF;
+  }
+  
+  .vehicleModel,
+  .vehicleManufacturer,
+  .vehiclePassenger,
+  .vehicleClass {
+    display: block;
+    margin-bottom: 5px;
+  }
