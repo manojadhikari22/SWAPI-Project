@@ -20,10 +20,11 @@ const renderUsers = (films)=> {
         const director = document.createElement("span");
         const releaseDate = document.createElement("span");
         const openingCrawl = document.createElement("p");
+        const image = document.createElement("img");
 
         //Appending Elements
         filmData.append(li);
-        li.append(title, episode, director, releaseDate, openingCrawl);
+        li.append(title, episode, director, releaseDate, openingCrawl, image);
 
         //Adding Classes to the created Elements
         li.classList.add('createdList');
@@ -31,6 +32,7 @@ const renderUsers = (films)=> {
         episode.classList.add('filmEpisode');
         director.classList.add("filmDirector");
         releaseDate.classList.add("filmReleaseDate");
+        image.classList.add("filmImage");
 
         //Setting the content of the created elements
         title.textContent = `Name: ${film.title}`;
@@ -38,5 +40,8 @@ const renderUsers = (films)=> {
         director.textContent = `Director: ${film.director}`;
         releaseDate.textContent = `Release Date: ${film.release_date}`;
         openingCrawl.textContent = `Opening Crawl: ${film.opening_crawl}`;
+
+        image.src = `assets/A-new-hope.jpg`;
+        image.alt = `${film.name} Image`;
     });
 }

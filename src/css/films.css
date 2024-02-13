@@ -1,4 +1,7 @@
 
+ul{
+  list-style: none;
+}
 h1 {
     text-align: center;
 }
@@ -27,4 +30,9 @@ nav a {
   
   .filmReleaseDate {
     font-weight: bold;
+  }
+
+  .filmImage{
+    width: 250px;
+    height: 200px;
   }

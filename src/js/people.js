@@ -19,10 +19,11 @@ const renderUsers = (peoples)=> {
         const gender = document.createElement("span");
         const height = document.createElement("span");
         const hairColor = document.createElement("span");
+        const image = document.createElement("img")
 
         //Appending Elements
         peopleData.append(li);
-        li.append(name, birthYear,gender, height, hairColor);
+        li.append(name, birthYear,gender, height, hairColor, image);
 
         //Adding Classes to the created Elements
         li.classList.add('createdList');
@@ -31,12 +32,15 @@ const renderUsers = (peoples)=> {
         gender.classList.add("peopleGender");
         height.classList.add("peopleHeight");
         hairColor.classList.add("peopleHairColor");
+        image.classList.add("peopleImage");
 
         //Setting the content of the created elements
         name.textContent = `Name: ${people.name}`;
         birthYear.textContent = `D.O.B: ${people.birth_year}`;
         gender.textContent = `Gender: ${people.gender}`;
         height.textContent = `Height: ${people.height}`;
-        hairColor.textContent = `HairColor: ${people.hair_color}`;
+        hairColor.textContent = `Hair Color: ${people.hair_color}`;
+        image.src = `assets/Luke.webp`;
+        image.alt = `${people.name} Image`;
     });
 }

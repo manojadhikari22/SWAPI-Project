@@ -19,10 +19,11 @@ const renderUsers = (planets)=> {
         const climate = document.createElement("span");
         const created = document.createElement("span");
         const gravity = document.createElement("span");
+        const image = document.createElement("img")
 
         //Appending Elements
         planetsData.append(li);
-        li.append(name, population, climate, created, gravity);
+        li.append(name, population, climate, created, gravity, image);
 
         //Adding Classes to the created Elements
         li.classList.add('createdList');
@@ -31,6 +32,7 @@ const renderUsers = (planets)=> {
         climate.classList.add("planetClimate");
         created.classList.add("planetCreated");
         gravity.classList.add("planetGravity");
+        image.classList.add("planetImage");
 
         //Setting the content of the created elements
         name.textContent = `Name: ${planet.name}`;
@@ -38,5 +40,8 @@ const renderUsers = (planets)=> {
         climate.textContent = `Climate: ${planet.climate}`;
         created.textContent = `Created: ${planet.created}`;
         gravity.textContent = `Gravity: ${planet.gravity}`;
+
+        image.src = `assets/Planet.jpg`;
+        image.alt = `${planet.name} Image`;
     });
 }
