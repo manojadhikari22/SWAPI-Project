@@ -1,10 +1,15 @@
 const planetsData = document.querySelector('#starWarsList');
 
 const fetchStarWars = async()=> {
-    const response = await fetch('https://swapi.dev/api/planets')
-    const data = await response.json();
-    console.log(data.results);
-    renderUsers(data.results)
+    try {
+        const response = await fetch('https://swapi.dev/api/planets')
+        const data = await response.json();
+        console.log(data.results);
+        renderUsers(data.results)
+    } catch (error) {
+        
+    }
+    
 }
 
 fetchStarWars()
