@@ -1,5 +1,18 @@
 const peopleData = document.querySelector('#starWarsList');
 
+const peopleImages = {
+    "Luke Skywalker": "assets/A-new-hope.jpg",
+    "C-3PO": "assets/c-3po.jpeg",
+    "R2-D2": "assets/R2D2.avif",
+    "Darth Vader": "assets/Darth-vader.jpeg",
+    "Leia Organa": "assets/Leia-organ.avif",
+    "Owen Lars": "assets/owen-lars.jpeg",
+    "Beru Whitesun lars": "assets/beru.jpg",
+    "R5-D4": "assets/R5-D4.webp",
+    "Biggs Darklighter": "assets/biggs-and-luke.avif",
+    "Obi-Wan Kenobi": "assets/Obi-wan.jpg"
+};
+
 const fetchStarWars = async()=> {
     const response = await fetch('https://swapi.dev/api/people')
     const data = await response.json();
@@ -40,7 +53,15 @@ const renderUsers = (peoples)=> {
         gender.textContent = `Gender: ${people.gender}`;
         height.textContent = `Height: ${people.height}`;
         hairColor.textContent = `Hair Color: ${people.hair_color}`;
-        image.src = `assets/Luke.webp`;
-        image.alt = `${people.name} Image`;
+        
+         // Set image source based on film title
+         const imageUrl = peopleImages[people.name];
+         if (imageUrl) {
+             image.src = imageUrl;
+             image.alt = `${people.name} Image`;
+         }
+
+        //image.src = `assets/Luke.webp`;
+        //image.alt = `${people.name} Image`;
     });
 }
