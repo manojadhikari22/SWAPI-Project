@@ -1,41 +1,84 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-body{
-  background-color: lightblue;
+ul {
+    list-style: none;
+    padding: 0;
 }
-ul{
-  list-style: none;
-}
+
 h1 {
     text-align: center;
+    margin: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    
 }
 
 nav a {
-    margin-left: 3rem;
-    font-size: 1.5rem;
+    margin: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #007BFF;
 }
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 .createdList {
     border: 1px solid #4c4747;
     padding: 10px;
-    margin-bottom: 20px;
-  }
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
 .filmTitle {
     font-size: 1.5em;
     color: #007BFF;
-  }
-  
-  .filmEpisode,
-  .filmDirector,
-  .filmReleaseDate {
+    margin: 10px 0;
+}
+
+.filmEpisode,
+.filmDirector,
+.filmReleaseDate {
     display: block;
     margin-bottom: 5px;
+}
+
+.filmReleaseDate {
+    font-weight: bold;
+}
+
+.filmImage {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    max-height: 200px;
+    display: block;
+    margin: 10px auto;
+}
+
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: center;
   }
   
-  .filmReleaseDate {
-    font-weight: bold;
+  .createdList {
+      text-align: center;
   }
-
-  .filmImage{
-    width: 250px;
-    height: 200px;
+  
+  .filmImage {
+      margin: 0 auto 10px;
   }
+}

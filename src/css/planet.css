@@ -1,37 +1,77 @@
-
-body{
-  background-color: lightblue;
+body {
+    background-color: lightblue;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 h1 {
     text-align: center;
+    margin: 20px 0;
 }
 
-li {
-    list-style: none;
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
 }
+
 nav a {
-    margin-left: 3rem;
-    font-size: 1.5rem;
+    margin: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #007BFF;
 }
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 .createdList {
     border: 1px solid #6b6565;
     padding: 10px;
-    margin-bottom: 20px;
-  }
-
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 .planetName {
-    font-size: 1.5em;
-    color: #007BFF;
-  }
-  
-  .planetPopulation,
-  .planetClimate,
-  .planetCreated,
-  .planetGravity {
+  font-size: 1.5em;
+  color: #007BFF;
+  margin: 10px 0;
+}
+.planetPopulation,
+.planetClimate,
+.planetCreated,
+.planetGravity {
     display: block;
     margin-bottom: 5px;
+}
+.planetImage{
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  max-height: 200px;
+  display: block;
+  margin: 10px auto;
+}
+
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: center;
   }
-  .planetImage{
-    width: 300px;
-    height: 200px;
+  
+  .createdList {
+      text-align: center;
   }
+  
+  .planetImage {
+      margin: 0 auto 10px;
+  }
+}
