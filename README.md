@@ -10,11 +10,11 @@ Each category will have its own dedicated page displaying relevant information. 
 
 Requirements:
 Data requirements, Programming requirements and Design requirements.
-Languages: Use HTML, CSS, and JavaScript.
+Languages: Uses HTML, CSS, and JavaScript.
 
 Deployment:
 1.Netlify
-2.Firebase
+
 
 Contributing:
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
